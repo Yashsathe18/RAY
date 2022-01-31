@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style2.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+</head>
+<body>
+  <button class="view-modal"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="btn bi bi-star" viewBox="0 0 16 16">
+  <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+</svg> </button>
+  <div class="popup">
+    <header>
+      <span>Share </span>
+      <div class="close"><i class="uil uil-times"></i></div>
+    </header>
+    <div class="content">
+      <p>Share this link via</p>
+      <ul class="icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-telegram-plane"></i></a>
+      </ul>
+      <p>Or copy link</p>
+      <div class="field">
+        <i class="url-icon uil uil-link"></i>
+        <input type="text" readonly value="example.com/share-link">
+        <button>Copy</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    const viewBtn = document.querySelector(".view-modal"),
+    popup = document.querySelector(".popup"),
+    close = popup.querySelector(".close"),
+    field = popup.querySelector(".field"),
+    input = field.querySelector("input"),
+    copy = field.querySelector("button");
+    viewBtn.onclick = ()=>{
+      popup.classList.toggle("show");
+    }
+    close.onclick = ()=>{
+      viewBtn.click();
+    }
+    copy.onclick = ()=>{
+      input.select(); //select input value
+      if(document.execCommand("copy")){ //if the selected text copy
+        field.classList.add("active");
+        copy.innerText = "Copied";
+        setTimeout(()=>{
+          window.getSelection().removeAllRanges(); //remove selection from document
+          field.classList.remove("active");
+          copy.innerText = "Copy";
+        }, 3000);
+      }
+    }
+  </script>
+  
+  <h1>Up Coming Events</h1>
+<div class="flex-container">
+  <div> 
+  <img src="D:\webdesigning\images\upcoming.jpg">   
+    <h2>King Fireworks Tour</h2>
+    <p>
+      <b>Venue Waters</b> : Bar & Kitchen
+      81/82, Pyramid Complex, N Main Rd, Koregaon Park Annexe, Koregaon Park, Pune, Maharashtra 411036, India <h4>₹500.</h4></p>
+  </div>
+  <div><img src="D:\webdesigning\images\upcoming2.jpg">   
+    <h2>Harsh Gujral Live on Screens near you</h2>
+    <p>
+      <b>Venue Waters</b> : Bar & Kitchen
+      81/82, Pyramid Complex, N Main Rd, Koregaon Park Annexe, Koregaon Park, Pune, Maharashtra 411036, India <h4>₹500.</h4></p></div>
+  <div><img src="D:\webdesigning\images\upcoming3.jpg">   
+    <h2>King Fireworks Tour</h2>
+    <p>
+      <b>Venue Waters</b> : Bar & Kitchen
+      81/82, Pyramid Complex, N Main Rd, Koregaon Park Annexe, Koregaon Park, Pune, Maharashtra 411036, India <h4>₹500.</h4></p></div>
+  <div><img src="D:\webdesigning\images\upcoming4.jpg">   
+    <h2>King Fireworks Tour</h2>
+    <p>
+      <b>Venue Waters</b> : Bar & Kitchen
+      81/82, Pyramid Complex, N Main Rd, Koregaon Park Annexe, Koregaon Park, Pune, Maharashtra 411036, India <h4>₹500.</h4></p></div>  
+  <div><img src="D:\webdesigning\images\upcoming5.jpg">   
+    <h2>King Fireworks Tour</h2>
+    <p>
+      <b>Venue Waters</b> : Bar & Kitchen
+      81/82, Pyramid Complex, N Main Rd, Koregaon Park Annexe, Koregaon Park, Pune, Maharashtra 411036, India <h4>₹500.</h4></p></div>  
+  <div><img src="D:\webdesigning\images\upcoming6.jpg">   
+    <h2>King Fireworks Tour</h2>
+    <p>
+      <b>Venue Waters</b> : Bar & Kitchen
+      81/82, Pyramid Complex, N Main Rd, Koregaon Park Annexe, Koregaon Park, Pune, Maharashtra 411036, India <h4>₹500.</h4></p></div>  
+  <div><img src="D:\webdesigning\images\upcoming7.jpg">   
+    <h2>King Fireworks Tour</h2>
+    <p>
+      <b>Venue Waters</b> : Bar & Kitchen
+      81/82, Pyramid Complex, N Main Rd, Koregaon Park Annexe, Koregaon Park, Pune, Maharashtra 411036, India <h4>₹500.</h4></p></div> 
+      <div><img src="D:\webdesigning\images\upcoming8.jpg">   
+    <h2>King Fireworks Tour</h2>
+    <p>
+      <b>Venue Waters</b> : Bar & Kitchen
+      81/82, Pyramid Complex, N Main Rd, Koregaon Park Annexe, Koregaon Park, Pune, Maharashtra 411036, India <h4>₹500.</h4></p></div> 
+      <div><img src="D:\webdesigning\images\upcoming9.jpg">   
+    <h2>King Fireworks Tour</h2>
+    <p>
+      <b>Venue Waters</b> : Bar & Kitchen
+      81/82, Pyramid Complex, N Main Rd, Koregaon Park Annexe, Koregaon Park, Pune, Maharashtra 411036, India <h4>₹500.</h4></p></div> 
+      <div><img src="D:\webdesigning\images\upcoming10.jpg">   
+    <h2>King Fireworks Tour</h2>
+    <p>
+      <b>Venue Waters</b> : Bar & Kitchen
+      81/82, Pyramid Complex, N Main Rd, Koregaon Park Annexe, Koregaon Park, Pune, Maharashtra 411036, India <h4>₹500.</h4></p></div> 
+      <div><img src="D:\webdesigning\images\upcoming11.jpg">   
+    <h2>King Fireworks Tour</h2>
+    <p>
+      <b>Venue Waters</b> : Bar & Kitchen
+      81/82, Pyramid Complex, N Main Rd, Koregaon Park Annexe, Koregaon Park, Pune, Maharashtra 411036, India <h4>₹500.</h4></p></div> 
+      <div><img src="D:\webdesigning\images\upcoming12.jpg">   
+    <h2>Free Musical Open Mic</h2>
+    <p>
+      <b>Venue Waters</b> : Bar & Kitchen
+      81/82, Pyramid Complex, N Main Rd, Koregaon Park Annexe, Koregaon Park, Pune, Maharashtra 411036, India <h4>₹500.</h4></p></div> 
+      <div><img src="D:\webdesigning\images\upcoming13.jpg">   
+    <h2>King Fireworks Tour</h2>
+    <p>
+      <b>Venue Waters</b> : Bar & Kitchen
+      81/82, Pyramid Complex, N Main Rd, Koregaon Park Annexe, Koregaon Park, Pune, Maharashtra 411036, India <h4>₹500.</h4></p></div>
+      <div><img src="D:\webdesigning\images\upcoming14.jpg">   
+    <h2>King Fireworks Tour</h2>
+    <p>
+      <b>Venue Waters</b> : Bar & Kitchen
+      81/82, Pyramid Complex, N Main Rd, Koregaon Park Annexe, Koregaon Park, Pune, Maharashtra 411036, India <h4>₹500.</h4></p></div>
+      <div><img src="D:\webdesigning\images\upcoming15.jpg">   
+    <h2>King Fireworks Tour</h2>
+    <p>
+      <b>Venue Waters</b> : Bar & Kitchen
+      81/82, Pyramid Complex, N Main Rd, Koregaon Park Annexe, Koregaon Park, Pune, Maharashtra 411036, India <h4>₹500.</h4></p></div>
+      <div><img src="D:\webdesigning\images\upcoming1.jpg">   
+    <h2>King Fireworks Tour</h2>
+    <p>
+      <b>Venue Waters</b> : Bar & Kitchen
+      81/82, Pyramid Complex, N Main Rd, Koregaon Park Annexe, Koregaon Park, Pune, Maharashtra 411036, India <h4>₹500.</h4></p></div>
+</div>
+
+        
+    
+
+    
+  
+  <footer>
+        <div class="footer-content">
+            <h3>R&Y</h3>
+            <p>We Are Glad To Serve You</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2022 R&Y. designed by <span>Yash Sathe</span></p>
+        </div>
+    </footer>
+</body>
+</html>
